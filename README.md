@@ -1,0 +1,4 @@
+# Documentação - COLAB
+
+> Como colaboradora eu quero poder controlar o estoque dos meus produtos e ser notificada quando um produto acabou, ver minhas vendas e poder alterar o preço dos produtos,  ter um relatório de quais produtos vendem mais, assim como o valor médio dos produtos comprados, editar as informações dos produtos, ter uma madeira de pagar o aluguel da loja, ser uma interface fácil de usada.N
+Como gerente dos colaboradores eu quero poder notificar os colabores de falta de produto, às vezes uma pessoa vem atrás de algo e não tem. Não quero ter acesso à edição, apenas ver as informações como estoque; vendas; pagamento de aluguel; os outros colaboradores não podem ver as informações um dos outros. O sistema deve ter um backup das informações, na web e local, ser uma interface fácil de usar., ser web
