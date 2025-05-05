@@ -30,7 +30,7 @@ Como gerente dos colaboradores eu quero poder notificar os colabores de falta de
 ### Requisitos Não Funcionais
 | Requisito | Descrição |
 | - | - |
-| RNF01 | Impedir que dois colabores vendem o mesmo produto |
+| RNF01 | Impedir que dois colabores vendão o mesmo produto |
 | RNF02 | Impedir que tenha mais de dois ramo iguais na mesma loja |
 | RNF03 | O sistema deve fazer o backup das informações pelo menos uma vez ao dia |
 | RNF04 | O sistema deve ser web |
