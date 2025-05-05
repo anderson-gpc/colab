@@ -35,6 +35,6 @@ Como gerente dos colaboradores eu quero poder notificar os colabores de falta de
 | RNF03 | O sistema deve fazer o backup das informações pelo menos uma vez ao dia |
 | RNF04 | O sistema deve ser web |
 | RNF05 | As credenciais dos colabores e informações pessoais sensíveis devem ser criptografadas |
-| RNF06 | A UI deve ser de fácil acesso aos usuários |
+| RNF06 | A UI deve ser de fácil acesso aos usuários que são leigos em informátia|
 | RNF07 | A UI deve possuir cores que cumpram os requisitos determinandos pelos padrões WCAG em exigências com **POUR** |
 | RNF08 | O sistema deve ser escalável com o tempo |
