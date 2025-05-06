@@ -90,5 +90,5 @@ Como gerente dos colaboradores eu quero poder notificar os colabores de falta de
 
 # Diagrama de Classe
 [Link para o diagrama](https://lucid.app/lucidchart/5d81d083-eb4d-421c-8d38-974a012c7eb4/edit?invitationId=inv_55252ff9-ccff-475f-a546-83b16320b0b5&page=0_0#)
-![alt_text](assets/imgs/Colab.png)
+![alt_text](assets/imgs/DiagramaOO.png)
 
