@@ -47,7 +47,7 @@ Como gerente dos colaboradores eu quero poder notificar os colabores de falta de
 
 </center>
 
-![alt text](assets/imgs/image.png)
+![alt text](assets/imgs/DiagramaCasoDeUso.png)
 
 # Documentação
 
