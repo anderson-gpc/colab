@@ -239,13 +239,13 @@ _Autores_: Gerente.<br>
 
 **Seleção de Produtos:**
 > 1a. O ID informado é inválido:<br>
-    - 1. O sistema informa que o ID é inválido.<br>
-    - 2. O gerente escolhe:<br>
-           - Informa um novo ID.<br>
-           - Cancelar a seleção do produto e voltar para a página principal.<br>
-    - 3. Se o gerente informar um novo ID, o sistema volta para o fluxo principal.<br>
+  - 1. O sistema informa que o ID é inválido.<br>
+  - 2. O gerente escolhe:<br>
+       - Informa um novo ID.<br>
+       - Cancelar a seleção do produto e voltar para a página principal.<br>
+  - 3. Se o gerente informar um novo ID, o sistema volta para o fluxo principal.<br>
 > 2a. Quantidade de produtos insuficiente.<br>
-    - 1. O sistema informa que a quantidade está insuficiente.<br>
+  - 1. O sistema informa que a quantidade está insuficiente.<br>
 
 ## Realizar Pagamento
 **Nome:** Realizar Pagamento.<br>
@@ -269,4 +269,4 @@ _Autores_: Gerente.<br>
 
 **Realizar Pagamento:**
 > 3a. O cliente desiste.<br>
-    - 1. O gerente cancela a venda.<br>
+  - 1. O gerente cancela a venda.<br>
