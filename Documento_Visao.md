@@ -58,32 +58,35 @@
 ***
 
 **Inclusão:** 
-> a. O gerente insere o nome, data de nascimento, cpf, e ramo do negócio do novo colaborador e clicar em salvar.
-> b. O sistema salva as informações no sistema. 
-
-**Remoção:** 
-> a. O gerente informa o CPF do usuário e clica em remover do sistema.
-> b. O sistema oculta as informações do colaborador.
+> 1. O gerente preenche os dados do colaborador e clica em "Salvar".<br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.
 
 **Consulta:**
-> a. O gerente informa o CPF do colaborador e clica em buscar.
-> b. O sistema retorna os dados do usuário.
+> 1. O gerente informa o CPF do colaborador e clica em "buscar".<br>
+> 2. O sistema exibe os dados do colaborador.
 
 **Edição:**
-> a. O gerente informa o CPF do usuário e pode atualizar os dados do colaborador e clicar em salvar.
-> b. O sistema salva as informações no sistema.
+> 1. O gerente informa o CPF do colaborador (include consulta).<br>
+> 2. O gerente atualiza os dados desejados e clica em “Atualizar”.<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:** 
+> 1. O gerente informa o CPF do colaborador (include Consulta).<br>
+> 2. O gerente clica em “Remover”.<br>
+> 2. O sistema oculta as informações pessoais do colaborador e marca o status como inativo.
 
 ### Cenário Alternativo:
-
 ***
+
 **Inclusão:**
-> 1a. O ramo do negócio do colaborador já existe no sistema.
-*  O sistema exibe que é impossível cadastrar mais de um colaborador com mesmo ramo de negócio e retorna ao sistema.
+> 2a. O ramo do negócio do colaborador já existe no sistema.
+  - 1. O sistema exibe que é impossível cadastrar mais de um colaborador com mesmo ramo de negócio e retorna ao sistema.
 
 **Remoção, Consulta e Edição:**
-> 2a. O gerente pode digitar o CPF incorreto ou o CPF pode não existir.
-* O gerente digita novamente o CPF e clica em buscar.
-* O sistema retorna os dados do colaborador se esse existir.
+> 2a. O CPF informado é inválido.
+  - 1. O sistema informará que o CPF é inválido.
+  - 2. O gerente digita um novo CPF válido e clica em "Salvar".
+  - 3. O sistema salva os dados do cliente no banco de dados.
 
 ## Manter Cliente
 **Nome:** Manter Cliente <br>
@@ -104,12 +107,12 @@ _Autores_: Gerente<br>
 > 2. O sistema exibe os dados do cliente.
 
 **Edição:**
-> 1. O gerente informa o CPF do cliente (include Consulta).<br>
+> 1. O gerente informa o CPF do cliente (include consulta).<br>
 > 2. O gerente atualiza os dados desejados e clica em “Atualizar”.<br>
 > 3. O sistema salva as novas informações no banco de dados.
 
 **Remoção:**
-> 1. O gerente informa o CPF do cliente (include Consulta).<br>
+> 1. O gerente informa o CPF do cliente (include consulta).<br>
 > 2. O gerente clica em “Remover”.<br>
 > 3. O sistema oculta as informações pessoais do cliente e marca o status como inativo.
 
