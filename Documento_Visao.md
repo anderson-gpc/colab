@@ -268,5 +268,5 @@ _Autores_: Gerente.<br>
 ***
 
 **Realizar Pagamento:**
-> 3a. O cliente desiste.
+> 3a. O cliente desiste.<br>
     - 1. O gerente cancela a venda.<br>
