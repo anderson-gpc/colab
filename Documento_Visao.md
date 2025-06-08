@@ -247,3 +247,26 @@ _Autores_: Gerente.<br>
 > 2a. Quantidade de produtos insuficiente.<br>
     - 1. O sistema informa que a quantidade está insuficiente.<br>
 
+## Realizar Pagamento
+**Nome:** Realizar Pagamento.<br>
+**Descrição:** Este caso de uso permite que seja realizado um pagamento.<br>
+_Autores_: Gerente.<br>
+**Pré-Condição:** Venda registrada e valor total definido<br>
+**Pós-Condição:** Pagamento registrado e ID único gerado e associado ao pagamento.
+
+### Cenário Principal:
+***
+
+**Realizar Pagamento:**
+> 1. Sistema apresenta total a pagar.<br>
+> 2. Funcionário escolhe forma de pagamento.<br>
+> 3. Cliente paga.<br>
+> 4. Sistema confirma pagamento.<br>
+> 5. Finaliza venda.
+
+### Cenário Alternativo:
+***
+
+**Realizar Pagamento:**
+> 3a. O cliente desiste.
+    - 1. O gerente cancela a venda.<br>
