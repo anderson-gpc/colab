@@ -100,7 +100,7 @@
 
 **Consulta:**
 > 1. O gerente informa o CPF do cliente e clica em “Buscar”.<br>
-> 2. O sistema exibe os dados do cliente, se encontrados.
+> 2. O sistema exibe os dados do cliente.
 
 **Edição:**
 > 1. O gerente informa o CPF do cliente (include Consulta).<br>
@@ -116,11 +116,11 @@
 ***
 
 **Inclusão ou Edição:**
-> 1a. O gerente informou um CPF inválido.
+> 2a. O CPF informado é inválido.
   - 1. O sistema informará que o CPF é inválido.
   - 2. O gerente digita um novo CPF válido e clica em "Salvar".
   - 3. O sistema salva os dados do cliente no banco de dados.
 
 **Consulta ou Remoção:**
-> 1a. O cliente não está cadastrado no sistema.
+> 2a. O cliente não está cadastrado no sistema.
   - 1. O sistema exibe uma mensagem de cliente não cadastrado.
