@@ -19,12 +19,14 @@ sequenceDiagram
     Venda->>Produto: consultar(p: Produto): Produto
     activate Produto
 
-    alt Produto existente
-        Produto-->>Venda: Dados do Produto
-    else false
-        Produto-->>Venda: [msg]:'Produto inexistente'
-        deactivate Produto
-        deactivate Venda
+    loop
+        alt Produto existente
+            Produto-->>Venda: Dados do Produto
+        else false
+            Produto-->>Venda: [msg]:'Produto inexistente'
+            deactivate Produto
+            deactivate Venda
+        end
     end
 ```
 ## Vender Produto
