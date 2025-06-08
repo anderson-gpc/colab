@@ -84,3 +84,32 @@
 > 2a. O gerente pode digitar o CPF incorreto ou o CPF pode não existir.
 * O gerente digita novamente o CPF e clica em buscar.
 * O sistema retorna os dados do colaborador se esse existir.
+
+## Manter Cliente
+**Nome:** Manter Cliente <br>
+**Descrição:** Este caso de uso permite que sejam cadastrados, editados e excluidos os clientes pelos gerentes. As informações para os cadastros: `Nome, cpf, endereço e contato`. _Autores_: Gerente<br>
+**Pré-Condição:** O Cliente ainda não está cadastrado no sistema.
+**Pós-Condição:** Um ID único foi gerado e associado ao cliente.
+
+### Cenário Principal
+***
+
+**Inclusão:**
+> a. O gerente insere o nome, cpf, endereço e contato do novo cliente e clica em salvar.
+> b. O sistema salva as informações no sistema.
+
+**Remoção:**
+> a. O gerente informa o CPF do cliente e clica em remover do sistema.
+> b. O sistema oculta as informações pessoais do cliente.
+
+**Consulta:**
+> a. 
+
+### Cenário Alternativo:
+***
+
+**Inclusão:**
+> 1a. O cliente já existe no sistema.
+* O sistema exibe que o cliente já foi cadastrado anteriormente ao sistema.
+> 2a. O gerente digita um CPF inválido.
+* O gerente corrige o CPF e clica em salvar.
