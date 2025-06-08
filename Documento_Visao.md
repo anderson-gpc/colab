@@ -87,8 +87,9 @@
 
 ## Manter Cliente
 **Nome:** Manter Cliente <br>
-**Descrição:** Este caso de uso permite que sejam cadastrados, editados e excluidos os clientes pelos gerentes. As informações para os cadastros: `Nome, cpf, endereço e contato`. _Autores_: Gerente<br>
-**Pré-Condição:** O Cliente ainda não está cadastrado no sistema.
+**Descrição:** Este caso de uso permite que sejam cadastrados, editados e excluidos os clientes pelos gerentes. As informações para os cadastros: `Nome, cpf, endereço e contato`. <br>
+_Autores_: Gerente<br>
+**Pré-Condição:** O Cliente ainda não está cadastrado no sistema.<br>
 **Pós-Condição:** Um ID único foi gerado e associado ao cliente.
 
 ### Cenário Principal
@@ -124,3 +125,47 @@
 **Consulta ou Remoção:**
 > 2a. O cliente não está cadastrado no sistema.
   - 1. O sistema exibe uma mensagem de cliente não cadastrado.
+
+## Manter Produto
+**Nome:** Manter Produto<br>
+**Descrição:** Este caso de uso permite que sejam cadastrados, consultados, editados e removidos os produtos. As informações para cadastro: `Nome, Descrição, Quantidade e Valor Unitário`.<br>
+_Autores_: Colaborador e Gerente.<br>
+**Pré-Condição:** NA<br>
+**Pós-Condição:** Um ID único foi gerado e associado a um produto.
+
+### Cenário Principal:
+***
+
+**Inclusão:**
+> 1. O colaborador preenche os dados do produto e clica em "Salvar".<br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.<br>
+
+**Consulta:**
+> 1. O sistema exibe uma prévia de todos os produtos do colaborador.<br>
+> 2. O colaborador ou gerente informa o ID do produto que quer fazer a consulta detalhada e clica em "Buscar".<br>
+> 3. O sistema exibe todos os dados do produto.
+
+**Edição:**
+> 1. O colaborador informa o ID do produto (include consulta).<br>
+> 2. O colaborador atualiza os dados desejados e clica em "Atualizar".<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:**
+> 1. O colaborador informa o ID do produto (include consulta).<br>
+> 2. O colaborador clica em "Remover".<br>
+> 3. O sistem oculta as informações do produto e marca o status como inativo.
+
+### Cenário Alternativo:
+***
+
+**Inclusão:**
+> 2a. já existe um produto com o mesmo nome associado ao colaborador.
+  - 1. O sistema informará que já existe um produto com o mesmo nome.
+  - 2. O colaborador escolhe:
+       - a. Digitar um novo nome para o produto.
+       - b. Cancelar a operação e voltar para a página principal.
+  - 3. Se o colaborador informar um novo nome para o produto, o sistema salva os dados do produto no banco de dados.
+
+**Consulta, Edição e Remoção:**
+> 2a. O produto não cadastrado no sistema.
+  - 1. O sistema exibe uma mensagem de produto não cadastrado.
