@@ -216,3 +216,34 @@ _Autores_: Gerente.<br>
 **Consulta, Edição e Remoção:**
 > 2a. O ramo de negócio não cadastrado no sistema.
   - 1. O sistema exibe uma mensagem de ramo de negócio não cadastrado.
+
+## Vender Produto
+**Nome:** Vender Produto.<br>
+**Descrição:** Este caso de uso permite que seja realizada uma venda pelo gerente.<br>
+_Autores_: Gerente.<br>
+**Pré-Condição:** NA<br>
+**Pós-Condição:** Venda registrada; estoque atualizado e um ID único gerado e associado a venda
+
+### Cenário Principal:
+***
+
+**Seleção de Produtos:**
+> 1. O gerente informa os IDs dos produtos.<br>
+> 2. O gerente informa a quantidade de produtos.<br>
+> 3. O sistema calcula o total da venda.<br>
+> 4. A venda é confirmada e enviada para o pagamento.<br>
+> 5. O sistema da baixa no estoque.
+
+## Cenário Alternativo:
+***
+
+**Seleção de Produtos:**
+> 1a. O ID informado é inválido:<br>
+    - 1. O sistema informa que o ID é inválido.<br>
+    - 2. O gerente escolhe:<br>
+           - Informa um novo ID.<br>
+           - Cancelar a seleção do produto e voltar para a página principal.<br>
+    - 3. Se o gerente informar um novo ID, o sistema volta para o fluxo principal.<br>
+> 2a. Quantidade de produtos insuficiente.<br>
+    - 1. O sistema informa que a quantidade está insuficiente.<br>
+
