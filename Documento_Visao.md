@@ -95,21 +95,32 @@
 ***
 
 **Inclusão:**
-> a. O gerente insere o nome, cpf, endereço e contato do novo cliente e clica em salvar.
-> b. O sistema salva as informações no sistema.
-
-**Remoção:**
-> a. O gerente informa o CPF do cliente e clica em remover do sistema.
-> b. O sistema oculta as informações pessoais do cliente.
+> 1. O gerente preenche os dados do cliente clica em “Salvar”. <br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.
 
 **Consulta:**
-> a. 
+> 1. O gerente informa o CPF do cliente e clica em “Buscar”.<br>
+> 2. O sistema exibe os dados do cliente, se encontrados.
+
+**Edição:**
+> 1. O gerente informa o CPF do cliente (include Consulta).<br>
+> 2. O gerente atualiza os dados desejados e clica em “Atualizar”.<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:**
+> 1. O gerente informa o CPF do cliente (include Consulta).<br>
+> 2. O gerente clica em “Remover”.<br>
+> 3. O sistema oculta as informações pessoais do cliente e marca o status como inativo.
 
 ### Cenário Alternativo:
 ***
 
-**Inclusão:**
-> 1a. O cliente já existe no sistema.
-* O sistema exibe que o cliente já foi cadastrado anteriormente ao sistema.
-> 2a. O gerente digita um CPF inválido.
-* O gerente corrige o CPF e clica em salvar.
+**Inclusão ou Edição:**
+> 1a. O gerente informou um CPF inválido.
+  - 1. O sistema informará que o CPF é inválido.
+  - 2. O gerente digita um novo CPF válido e clica em "Salvar".
+  - 3. O sistema salva os dados do cliente no banco de dados.
+
+**Consulta ou Remoção:**
+> 1a. O cliente não está cadastrado no sistema.
+  - 1. O sistema exibe uma mensagem de cliente não cadastrado.
