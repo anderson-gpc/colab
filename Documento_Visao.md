@@ -52,35 +52,221 @@
 **Nome:** Manter Colaborador <br>
 **Descrição:** Este caso de uso permite que sejam cadastrados, editados e excluído os colabores pelos gerentes. As informações para os cadastros: `Nome, data de nascimento, cpf, e ramo do negócio`. _Autores_: Gerente<br>
 **Pré-Condição:** Se a marca do ramo do negócio já existir na loja, será impossível cadastrar. <br>
-**Pós-Condições:** NA
+**Pós-Condições:** Um ID único foi gerado e associado ao colaborador.
 
 ### Cenário Principal
 ***
 
 **Inclusão:** 
-> a. O gerente insere o nome, data de nascimento, cpf, e ramo do negócio do novo colaborador e clicar em salvar.
-> b. O sistema salva as informações no sistema. 
-
-**Remoção:** 
-> a. O gerente informa o CPF do usuário e clica em remover do sistema.
-> b. O sistema oculta as informações do colaborador.
+> 1. O gerente preenche os dados do colaborador e clica em "Salvar".<br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.
 
 **Consulta:**
-> a. O gerente informa o CPF do colaborador e clica em buscar.
-> b. O sistema retorna os dados do usuário.
+> 1. O gerente informa o CPF do colaborador e clica em "buscar".<br>
+> 2. O sistema exibe os dados do colaborador.
 
 **Edição:**
-> a. O gerente informa o CPF do usuário e pode atualizar os dados do colaborador e clicar em salvar.
-> b. O sistema salva as informações no sistema.
+> 1. O gerente informa o CPF do colaborador (include consulta).<br>
+> 2. O gerente atualiza os dados desejados e clica em “Atualizar”.<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:** 
+> 1. O gerente informa o CPF do colaborador (include Consulta).<br>
+> 2. O gerente clica em “Remover”.<br>
+> 2. O sistema oculta as informações pessoais do colaborador e marca o status como inativo.
 
 ### Cenário Alternativo:
-
 ***
+
 **Inclusão:**
-> 1a. O ramo do negócio do colaborador já existe no sistema.
-*  O sistema exibe que é impossível cadastrar mais de um colaborador com mesmo ramo de negócio e retorna ao sistema.
+> 2a. O ramo do negócio do colaborador já existe no sistema.
+  - 1. O sistema exibe que é impossível cadastrar mais de um colaborador com mesmo ramo de negócio e retorna ao sistema.
 
 **Remoção, Consulta e Edição:**
-> 2a. O gerente pode digitar o CPF incorreto ou o CPF pode não existir.
-* O gerente digita novamente o CPF e clica em buscar.
-* O sistema retorna os dados do colaborador se esse existir.
+> 2a. O CPF informado é inválido.
+  - 1. O sistema informará que o CPF é inválido.
+  - 2. O gerente digita um novo CPF válido e clica em "Salvar".
+  - 3. O sistema salva os dados do cliente no banco de dados.
+
+## Manter Cliente
+**Nome:** Manter Cliente <br>
+**Descrição:** Este caso de uso permite que sejam cadastrados, editados e excluidos os clientes pelos gerentes. As informações para os cadastros: `Nome, cpf, endereço e contato`. <br>
+_Autores_: Gerente<br>
+**Pré-Condição:** O Cliente ainda não está cadastrado no sistema.<br>
+**Pós-Condição:** Um ID único foi gerado e associado ao cliente.
+
+### Cenário Principal
+***
+
+**Inclusão:**
+> 1. O gerente preenche os dados do cliente clica em “Salvar”. <br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.
+
+**Consulta:**
+> 1. O gerente informa o CPF do cliente e clica em “Buscar”.<br>
+> 2. O sistema exibe os dados do cliente.
+
+**Edição:**
+> 1. O gerente informa o CPF do cliente (include consulta).<br>
+> 2. O gerente atualiza os dados desejados e clica em “Atualizar”.<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:**
+> 1. O gerente informa o CPF do cliente (include consulta).<br>
+> 2. O gerente clica em “Remover”.<br>
+> 3. O sistema oculta as informações pessoais do cliente e marca o status como inativo.
+
+### Cenário Alternativo:
+***
+
+**Inclusão ou Edição:**
+> 2a. O CPF informado é inválido.
+  - 1. O sistema informará que o CPF é inválido.
+  - 2. O gerente digita um novo CPF válido e clica em "Salvar".
+  - 3. O sistema salva os dados do cliente no banco de dados.
+
+**Consulta ou Remoção:**
+> 2a. O cliente não está cadastrado no sistema.
+  - 1. O sistema exibe uma mensagem de cliente não cadastrado.
+
+## Manter Produto
+**Nome:** Manter Produto<br>
+**Descrição:** Este caso de uso permite que sejam cadastrados, consultados, editados e removidos os produtos. As informações para cadastro: `Nome, Descrição, Quantidade e Valor Unitário`.<br>
+_Autores_: Colaborador e Gerente.<br>
+**Pré-Condição:** NA<br>
+**Pós-Condição:** Um ID único foi gerado e associado a um produto.
+
+### Cenário Principal:
+***
+
+**Inclusão:**
+> 1. O colaborador preenche os dados do produto e clica em "Salvar".<br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.<br>
+
+**Consulta:**
+> 1. O sistema exibe uma prévia de todos os produtos do colaborador.<br>
+> 2. O colaborador ou gerente informa o ID do produto que quer fazer a consulta detalhada e clica em "Buscar".<br>
+> 3. O sistema exibe todos os dados do produto.
+
+**Edição:**
+> 1. O colaborador informa o ID do produto (include consulta).<br>
+> 2. O colaborador atualiza os dados desejados e clica em "Atualizar".<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:**
+> 1. O colaborador informa o ID do produto (include consulta).<br>
+> 2. O colaborador clica em "Remover".<br>
+> 3. O sistem oculta as informações do produto e marca o status como inativo.
+
+### Cenário Alternativo:
+***
+
+**Inclusão:**
+> 2a. já existe um produto com o mesmo nome associado ao colaborador.
+  - 1. O sistema informará que já existe um produto com o mesmo nome.
+  - 2. O colaborador escolhe:
+       - a. Digitar um novo nome para o produto.
+       - b. Cancelar a operação e voltar para a página principal.
+  - 3. Se o colaborador informar um novo nome para o produto, o sistema salva os dados do produto no banco de dados.
+
+**Consulta, Edição e Remoção:**
+> 2a. O produto não cadastrado no sistema.
+  - 1. O sistema exibe uma mensagem de produto não cadastrado.
+
+## Manter Ramo de Negócio
+**Nome:** Manter Ramo de Negócio.<br>
+**Descrição:** Este caso de uso permite que sejam cadastrados, consultados, editados e removidos os ramos de negócios dos colaboradores. As informações para cadastro: `Nome`.<br>
+_Autores_: Gerente.<br>
+**Pré-Condição:** NA<br>
+**Pós-Condição:** Um ID único foi gerado e associado a um ramo de negócio.
+
+### Cenário Principal:
+***
+
+**Inclusão:**
+> 1. O gerente preenche os dados do ramo de negócio e clica em "Salvar".<br>
+> 2. O sistema armazena as informações no banco de dados e confirma a inclusão.<br>
+
+**Consulta:**
+> 1. O sistema exibe uma prévia de todos os ramos de negócios já cadastrados.<br>
+> 2. O gerente informa o ID do ramo de negócio que quer fazer a consulta detalhada e clica em "Buscar".<br>
+> 3. O sistema exibe todos os dados do ramo de negócio.
+
+**Edição:** 
+> 1. O gerente informa o ID do ramo de negócio (include consulta).<br>
+> 2. O gerente atualiza os dados desejados e clica em "Atualizar".<br>
+> 3. O sistema salva as novas informações no banco de dados.
+
+**Remoção:**
+> 1. O gerente informa o ID do ramo de negócio (include consulta).<br>
+> 2. O gerente clica em "Remover".<br>
+> 3. O sistem oculta as informações do ramo de negócio e marca o status como inativo.
+
+### Cenário Alternativo:
+***
+
+**Inclusão:**
+> 2a. já existe um ramo de negócio com o mesmo nome no sistema.
+  - 1. O sistema informará que já existe um produto com o mesmo nome.
+  - 2. O gerente escolhe:
+       - a. Digitar um novo nome para o ramo de negócio.
+       - b. Cancelar a operação e voltar para a página principal.
+  - 3. Se o gerente informar um novo nome para o ramo de negócio, o sistema salva os dados do ramo de negócio no banco de dados.
+
+**Consulta, Edição e Remoção:**
+> 2a. O ramo de negócio não cadastrado no sistema.
+  - 1. O sistema exibe uma mensagem de ramo de negócio não cadastrado.
+
+## Vender Produto
+**Nome:** Vender Produto.<br>
+**Descrição:** Este caso de uso permite que seja realizada uma venda pelo gerente.<br>
+_Autores_: Gerente.<br>
+**Pré-Condição:** NA<br>
+**Pós-Condição:** Venda registrada; estoque atualizado e um ID único gerado e associado a venda
+
+### Cenário Principal:
+***
+
+**Seleção de Produtos:**
+> 1. O gerente informa os IDs dos produtos.<br>
+> 2. O gerente informa a quantidade de produtos.<br>
+> 3. O sistema calcula o total da venda.<br>
+> 4. A venda é confirmada e enviada para o pagamento.<br>
+> 5. O sistema da baixa no estoque.
+
+## Cenário Alternativo:
+***
+
+**Seleção de Produtos:**
+> 1a. O ID informado é inválido:<br>
+  - 1. O sistema informa que o ID é inválido.<br>
+  - 2. O gerente escolhe:<br>
+       - Informa um novo ID.<br>
+       - Cancelar a seleção do produto e voltar para a página principal.<br>
+  - 3. Se o gerente informar um novo ID, o sistema volta para o fluxo principal.<br>
+> 2a. Quantidade de produtos insuficiente.<br>
+  - 1. O sistema informa que a quantidade está insuficiente.<br>
+
+## Realizar Pagamento
+**Nome:** Realizar Pagamento.<br>
+**Descrição:** Este caso de uso permite que seja realizado um pagamento.<br>
+_Autores_: Gerente.<br>
+**Pré-Condição:** Venda registrada e valor total definido<br>
+**Pós-Condição:** Pagamento registrado e ID único gerado e associado ao pagamento.
+
+### Cenário Principal:
+***
+
+**Realizar Pagamento:**
+> 1. Sistema apresenta total a pagar.<br>
+> 2. Funcionário escolhe forma de pagamento.<br>
+> 3. Cliente paga.<br>
+> 4. Sistema confirma pagamento.<br>
+> 5. Finaliza venda.
+
+### Cenário Alternativo:
+***
+
+**Realizar Pagamento:**
+> 3a. O cliente desiste.<br>
+  - 1. O gerente cancela a venda.<br>
