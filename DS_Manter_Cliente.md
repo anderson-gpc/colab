@@ -2,23 +2,23 @@
 ```mermaid
 sequenceDiagram
     autonumber
-    box Consultar Cliente
+    box Consultar Pessoa
         actor Gerente
         participant Interface
-        participant Cliente
+        participant Pessoa
     end
 
-    Gerente->>Interface: Visualizar cliente
+    Gerente->>Interface: Visualizar Pessoa
     activate Gerente
     activate Interface
-    Interface->>Cliente: visualizar(c: Cliente): Cliente
-    activate Cliente
+    Interface->>Pessoa: visualizar(c: Pessoa): Pessoa
+    activate Pessoa
 
-    alt Consultar Cliente
-        Cliente-->>Interface: Dados do cliente
+    alt Consultar Pessoa
+        Pessoa-->>Interface: Dados do Pessoa
     else
-        Cliente-->>Interface: Cliente não existe
-        deactivate Cliente
+        Pessoa-->>Interface: Pessoa não existe
+        deactivate Pessoa
         deactivate Interface
     end
 
@@ -29,21 +29,21 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     autonumber
-    box Adicionar Cliente
+    box Adicionar Pessoa
         actor Gerente
         participant Interface
-        participant Cliente
+        participant Pessoa
     end
 
-    note over Gerente, Cliente: Consultar Cliente
+    note over Gerente, Pessoa: Consultar Pessoa
 
-    Gerente->>Interface: Adicionar Cliente
+    Gerente->>Interface: Adicionar Pessoa
     activate Gerente
     activate Interface
-    Interface->>Cliente:adicionar(c: Cliente):void
-    activate Cliente
+    Interface->>Pessoa:adicionar(c: Pessoa):void
+    activate Pessoa
 
-    deactivate Cliente
+    deactivate Pessoa
     deactivate Interface
     deactivate Gerente
     
@@ -52,20 +52,20 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     autonumber
-    box Excluir Cliente
+    box Excluir Pessoa
         actor Gerente
         participant Interface
-        participant Cliente
+        participant Pessoa
     end
 
-    note over Gerente, Cliente: Consultar Cliente
+    note over Gerente, Pessoa: Consultar Pessoa
     
-    Gerente->>Interface: Excluir Cliente
+    Gerente->>Interface: Excluir Pessoa
     activate Gerente
     activate Interface
-    Interface->>Cliente:excluir(c: Cliente):void
-    activate Cliente
-    deactivate Cliente
+    Interface->>Pessoa:excluir(c: Pessoa):void
+    activate Pessoa
+    deactivate Pessoa
     deactivate Interface
     deactivate Gerente
     
@@ -74,21 +74,21 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     autonumber
-    box Editar Cliente
+    box Editar Pessoa
         actor Gerente
         participant Interface
-        participant Cliente
+        participant Pessoa
     end
 
-    note over Gerente, Cliente: Consultar Cliente
+    note over Gerente, Pessoa: Consultar Pessoa
 
-    Gerente->>Interface:Editar Cliente
+    Gerente->>Interface:Editar Pessoa
     activate Gerente
     activate Interface
-    Interface->>Cliente:editar(c: Cliente):void
-    activate Cliente
+    Interface->>Pessoa:editar(c: Pessoa):void
+    activate Pessoa
 
-    deactivate Cliente
+    deactivate Pessoa
     deactivate Interface
     deactivate Gerente
 ```
