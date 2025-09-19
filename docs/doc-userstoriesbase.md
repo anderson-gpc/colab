@@ -80,3 +80,36 @@
 | **Critérios de Aceitação** | -O sistema deve permitir a inserção do **código do produto** e a **quantidade do produto** |
 | **Testes de Aceitação**    | - TA01.01 - Cadastro de uma venda com estoque de produto suficiente.<br>- TA01.02 - Cadastro de venda com **código do produto** inválido. <br>- TA01.03 - Cadastro de venda com estoque insuficiente ou inválido.<br>- TA01.04 - Cancelamento de venda antes da confirmação do pagamento.  |
 | **Estimativa**              | 8h                                                                 |
+
+---
+
+### User Story US06 - Realizar Pagamento
+
+| Campo                     | Descrição                                                                                                                                             |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Título**                 | Realizar Pagamento                                                                                                                                    |
+| **Identificação**          | US06 - Realizar Pagamento                                                                                                                             |
+| **Story**                  | Como **gerente**, quero registrar o pagamento de uma venda, informando a forma de pagamento (dinheiro, cartão, pix, etc.), para que a venda seja finalizada corretamente e o cliente receba o comprovante. |
+| **Requisitos Relacionados**| RF04                                                                                                                                                  |
+| **Critérios de Aceitação** | - O sistema deve exibir o **valor total da venda** antes do pagamento.<br>- O sistema deve permitir escolher a **forma de pagamento** (dinheiro, cartão, pix, etc.).<br>- O sistema deve confirmar o pagamento e gerar **comprovante**.<br>- O sistema deve permitir o **cancelamento da venda** caso o cliente desista antes da confirmação do pagamento. |
+| **Testes de Aceitação**    | - TA02.01 - Realização de pagamento em dinheiro com sucesso.<br>- TA02.02 - Realização de pagamento via cartão com sucesso.<br>- TA02.03 - Realização de pagamento via pix com sucesso.<br>- TA02.04 - Tentativa de pagamento cancelada pelo cliente antes da confirmação.<br>- TA02.05 - Validação de forma de pagamento inválida. |
+| **Estimativa**             | 6h                                                                                                                                                    |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
