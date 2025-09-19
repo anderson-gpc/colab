@@ -5,6 +5,8 @@
 | US02 | Manter Colaborador |
 | US03 | Manter Produto |
 | US04 | Manter Ramo de Negócio |
+| US05 | Vender Produto |
+| US06 | Realizar Pagamento |
 
 ---
 
@@ -63,4 +65,18 @@
 | **Requisitos Relacionados**| RF06                                                         |
 | **Critérios de Aceitação** | - O sistema permite cadastrar produtos com Nome, SubTipo<br> - Impedir que mais de dois colaboradores tenham o mesmo ramo de negócio.<br> - O sistema permite consultar, editar corretamente.<br> - O sistema exibe mensagens claras de sucesso ou erro. |
 | **Testes de Aceitação**    | - TA01.01 - Cadastro de ramo de negócio com todos os campos obrigatórios preenchidos é bem-sucedido.<br>- TA01.02 - Consulta, edição e remoção retornam resultados corretos.<br>- TA01.03 - Tentativa de cadastro de dois colaboradores tenham o mesmo ramo de negócio retorna mensagem de erro. |
+| **Estimativa**              | 8h                                                                 |
+
+---
+
+### User Story US05 - Vender Produto.
+
+| Campo                    | Descrição                                                                 |
+|---------------------------|---------------------------------------------------------------------------|
+| **Título**                | Vender Produto                                  |
+| **Identificação**          | US05 - Vender produto                          |
+| **Story**                  | Como gerente quero vender produtos e que a venda desse produto seja cadastrado no sistema com seu **código de venda**, **código do produto**, **quantidade do produto** e que o **estoque** do produto seja atualizado.  |
+| **Requisitos Relacionados**| RF03                                                         |
+| **Critérios de Aceitação** | -O sistema deve permitir a inserção do **código do produto** e a **quantidade do produto** |
+| **Testes de Aceitação**    | - TA01.01 - Cadastro de uma venda com estoque de produto suficiente.<br>- TA01.02 - Cadastro de venda com **código do produto** inválido. <br>- TA01.03 - Cadastro de venda com estoque insuficiente ou inválido.<br>- TA01.04 - Cancelamento de venda antes da confirmação do pagamento.  |
 | **Estimativa**              | 8h                                                                 |
