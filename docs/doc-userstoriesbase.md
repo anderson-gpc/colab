@@ -1,42 +1,16 @@
-## User Story US01 - Base Usuár
-
-|  |  |
-| --- | --- |
-| Descrição | |
-
-| **Requisitos Envolvidos** ||
-| ------------------------- |-|
-| RF01 | Requisito 1 |
-
-| | |
-| - | - |
-| **Prioriedade** | Essencial |
-| **Estimativa** | 8h |
-| **Tempo Gasto (real):** | |
-| **Tamanho funcional** | |
-| **Analista** | |
-| **Desenvolvedor** | |
-| **Revisor** | |
-| **Testador** | |
-
-
-| Testes de Aceitação (TA) | |
-| - | - |
-| **Código** | **Descrição** |
-
-## User Story - Table 
+### User Story US01 - Manter Cliente.
 | Campo                    | Descrição                                                                 |
 |---------------------------|---------------------------------------------------------------------------|
-| **Título**                | Descrever funcionalidade resumidamente                                   |
-| **Identificação**          | USXX - Nome Curto                                                        |
-| **Story**                  | Como [tipo de usuário], quero [ação desejada], para [benefício/valor].   |
-| **Requisitos Relacionados**| RF01, RF02...                                                             |
-| **Critérios de Aceitação** | - O sistema deve exibir mensagem de sucesso após cadastro correto.<br>- O sistema deve validar campos obrigatórios e exibir mensagens de erro. |
-| **Testes de Aceitação**    | - TA01.01 - Cadastro bem-sucedido com todos os dados preenchidos.<br>- TA01.02 - Tentativa com campos vazios retorna erro. |
-| **Estimativa**              | 5h                                                                      |
-| **Tempo Real Gasto**        | 2h                                                                      |
-| **Tamanho Funcional**        | 8 PF                                                                   |
-| **Prioridade**               | Essencial / Importante / Opcional                                      |
-| **Responsáveis**             | - Analista: Nome<br>- Desenvolvedor: Nome<br>- Revisor: Nome<br>- Testador: Nome |
+| **Título**                | Gerenciar Clientes                                   |
+| **Identificação**          | US01 - Manter Cliente                                                        |
+| **Story**                  | Como gerente, quero poder cadastrar, visualizar, editar e excluir clientes no sistema, preenchendo campos como nome, CPF, endereço e contato, para manter um registro completo, atualizado e confiável de todos os clientes da loja.  |
+| **Requisitos Relacionados**| RF06                                                            |
+| **Critérios de Aceitação** | - O sistema permite cadastrar clientes com nome, CPF, endereço e contato.<br> - O sistema valida CPF (único e formato correto).<br> - O sistema permite consultar, editar e excluir clientes corretamente.<br> - O sistema exibe mensagens claras de sucesso ou erro. |
+| **Testes de Aceitação**    | - TA01.01 - Cadastro de cliente com todos os campos obrigatórios preenchidos é bem-sucedido.<br>- TA01.02 - Consulta de cliente pelo CPF retorna dados corretos ou mensagem de erro se não existir.<br>- TA01.03 - Edição e exclusão atualizam ou desativam corretamente o cliente no sistema. |
+| **Estimativa**              | 6h                                                                      |
+| **Tempo Real Gasto**        |                                                                       |
+| **Tamanho Funcional**        | x PF                                                                   |
+| **Prioridade**               | Essencial                                      |
+| **Responsáveis**             | - Analista: Anderson Gabriel<br>- Desenvolvedor: Paulo Douglas<br>- Revisor: Diana Rodrigues<br>- Testador: Diana Rodrigues |
 | **Protótipo**                | *(inserir link ou imagem do protótipo)*                                |
 
