@@ -1,3 +1,9 @@
+### Tabelas de Users Stories
+| Nome | Descrição |
+|------|-----------|
+| US01 | Manter Cliente
+| US02 | Manter Colaborador
+
 ### User Story US01 - Manter Cliente.
 | Campo                    | Descrição                                                                 |
 |---------------------------|---------------------------------------------------------------------------|
