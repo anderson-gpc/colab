@@ -1,8 +1,8 @@
 ---
-Tpo: [FIX - FEAT - STYLE - ... ]
-Nome: 📚 Documentação
-Sobre: Criação ou atualização de documentação do projeto
-Título: "[DOCS] Título da documentação"
+Type: [FIX - FEAT - STYLE - ... ]
+Name: 📚 Documentação
+About: Criação ou atualização de documentação do projeto
+Title: "[DOCS] Título da documentação"
 ---
 
 ## 📖 Visão Geral
