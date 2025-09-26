@@ -3,9 +3,9 @@
 Documento construído a partido do **Modelo BSI - Doc 001 - Documento de Visão** que pode ser encontrado no
 link: https://docs.google.com/document/d/1DPBcyGHgflmz5RDsZQ2X8KVBPoEF5PdAz9BBNFyLa6A/edit?usp=sharing
 
-## Descrição do Projeto
+## Resumo
 
-Descrever de forma geral o projeto.
+O projeto COLAB é um sistema de gestão desenvolvido para lojas colaborativas, onde diferentes colaboradores compartilham um mesmo espa¸co físico para vender seus produtos. O sistema visa facilitar a administração de estoque, vendas, e pagamentos, além de fornecer ferramentas para gerenciar colaboradores e clientes.
 
 ## Equipe e Definição de Papéis
 
@@ -15,7 +15,7 @@ Anderson    | Desenvolvedor  | gabriel.cruz.133@ufrn.edu.br
 Diana     | Desenvolvedor | diana.rodrigues.131@ufrn.edu.br
 Paulo         | Desenvolvedor | paulo.martins.132@ufrn.edu.br
 
-### Matriz de Competências
+#### Matriz de Competências
 
 Membro     |     Competências   |
 ---------  | ----------- |
@@ -23,220 +23,69 @@ Anderson    | -
 Diana | -   
 Paulo     | - |
 
-## Perfis dos Usuários
+#### Perfis dos Usuários
 
 O sistema poderá ser utilizado por diversos usuários. Temos os seguintes perfis/atores:
 
-Perfil                                 | Descrição   |
----------                              | ----------- |
- "Perfil" | "Descrição"
+| Número | Perfil              | Descrição                                                                                                  |
+|--------|---------------------|------------------------------------------------------------------------------------------------------------|
+| 1      | Colaborador         | Usuário do sistema com função de colaborador na loja. Pode adicionar, solicitar baixa e alterar produtos. Pode visualizar apenas seus próprios produtos no sistema. |
+| 2      | Gerente             | Usuário do sistema que gerencia os colaboradores, possuindo visão geral dos colaboradores, estoque, vendas e pagamentos de aluguel.                          |
+| 3      | Cliente             | Ator passivo que participa das vendas, tendo seus dados registrados no sistema, mas sem acesso direto ao sistema.                                            |
+| 4      | Sistema de Pagamento | Sistema externo de pagamento.                                                                          |
 
-## Lista de Requisitos Funcionais
+## Requisitos Funcionais
 
-### Entidade Centro - US01 - Manter Centro
-Um centro representa uma unidade administrativa da Universidade. Um centro tem código, nome, sigla, endereço e site.
+| ID | Módulo | Requisito Funcional | Visão |
+| :---: | :---: | :--- | :--- |
+| **RF01** | **Usuários/Acesso** | Permitir o **cadastro** e a **gestão** de usuários (Gestores e Colaboradores). | Geral |
+| **RF02** | **Multi-Loja** | Permitir o **cadastro** e a **gestão** de múltiplas lojas no sistema (por um Gestor Principal). | Gerente |
+| **RF03** | **Produtos/Estoque** | Permitir ao Colaborador **cadastrar** e **gestão** de seus produtos (fotos, descrição, preço). | Colaborador |
+| **RF04** | **Produtos/Estoque** | Permitir ao Colaborador **acompanhar o estoque em tempo real** dos seus produtos. | Colaborador |
+| **RF05** | **Alerta/Estoque** | Gerar **notificações** ao Gerente e/ou Colaborador quando um produto atingir um nível mínimo de estoque (ponto de reposição). | Gerente/Colaborador |
+| **RF06** | **Vendas/Financeiro** | Registrar as **vendas** de produtos, associando-as ao Colaborador e loja corretos. | Geral |
+| **RF07** | **Vendas/Financeiro** | Permitir ao Colaborador **visualizar** suas comissões e repasses detalhados por venda, incluindo os gastos envolvidos (taxas). | Colaborador |
+| **RF08** | **Vendas/Relatórios** | Gerar **relatórios** de vendas (semanal/mensal) para o Colaborador, indicando os produtos com mais saídas. | Colaborador |
+| **RF09** | **Promoções** | Permitir ao Colaborador **cadastrar promoções/descontos** em seus produtos. | Colaborador |
+| **RF10** | **Promoções** | Gerar uma **notificação** na loja física (via integração futura) sobre o preço atualizado/desconto. | Colaborador |
+| **RF11** | **Dashboard/Indicadores** | Exibir um **Dashboard Geral** para o Gerente com estatísticas consolidadas (vendas, estoque, aluguel, contas a pagar). | Gerente |
+| **RF12** | **Dashboard/Indicadores** | Exibir um **Dashboard Pessoal** para o Colaborador com suas métricas e resultados. | Colaborador |
+| **RF13** | **Dashboard/Indicadores** | Permitir ao Colaborador **escolher e personalizar** os indicadores que deseja acompanhar (faturamento, ticket médio, etc.). | Colaborador |
+| **RF14** | **Espaços/Aluguel** | Permitir ao Gerente **cadastrar** e **definir valores de aluguel** dos espaços/stands/prateleiras. | Gerente |
+| **RF15** | **Espaços/Aluguel** | Permitir ao Gerente **associar** um espaço a um Colaborador. | Gerente |
+| **RF16** | **Financeiro/Aluguel** | Permitir ao Colaborador **visualizar** e gerir os pagamentos de aluguel do seu espaço. | Colaborador |
+| **RF17** | **Financeiro/Comissões** | Calcular **automaticamente** as comissões dos Colaboradores com base nas vendas e taxas predefinidas. | Gerente |
+| **RF18** | **Financeiro/Contas** | Gerar **alertas** ao Gerente sobre contas a pagar (ex: aluguel geral, impostos) e contas a receber. | Gerente |
+| **RF19** | **CRM** | Fornecer um módulo **CRM** (Customer Relationship Management) para o Gerente gerenciar os clientes e facilitar a comunicação. | Gerente |
+| **RF20** | **Feedback** | Permitir o registro e acompanhamento do **feedback do cliente** (avaliação de atendimento, logística e produtos). | Colaborador |
 
-Requisito                     | Descrição   | Ator |
----------                     | ----------- | ---------- |
-RF01.01 - Inserir Centro      | Insere novo centro informando: código, nome, sigla, endereço e site. | Administrador |
-RF01.02 - Listar Centros      | Listagem dos centros utilizando filtros nos atributos: código, nome, sigla, endereço e site. | Administrador, Docente, Discente |
-RF01.03 - Atualizar Centro    | Atualiza um centro informando: nome, sigla, endereço e site. | Administrador |
-RF01.04 - Deletar Centro      | Deleta um centro informando o código. | Administrador |
+## Requisitos Não Funcionais
 
----
+| ID | Categoria | Requisito Não Funcional |
+| :---: | :---: | :--- |
+| **RNF01** | **Usabilidade** | A interface do sistema (web e mobile) deve ser **intuitiva** e de **fácil aprendizado**, com um design **responsivo** e **acessível**. |
+| **RNF02** | **Desempenho** | O tempo de carregamento das páginas e dashboards não deve exceder **3 segundos**, mesmo com um alto volume de dados. |
+| **RNF03** | **Disponibilidade** | O sistema deve estar **disponível 24 horas por dia, 7 dias por semana (99,9% de *uptime*)**. |
+| **RNF04** | **Segurança (Dados)** | Todos os dados sensíveis (financeiros, pessoais de colaboradores e clientes) devem ser **criptografados** (em trânsito - SSL/TLS - e em repouso). |
+| **RNF05** | **Segurança (Acesso)** | Deve haver **perfis de acesso** bem definidos (Gestor e Colaborador), garantindo que cada usuário acesse apenas as informações e funcionalidades de sua responsabilidade (isolamento de dados dos colaboradores). |
+| **RNF06** | **Escalabilidade** | A arquitetura do sistema deve ser capaz de suportar o **crescimento** no número de lojas, colaboradores e volume de transações **sem degradação significativa de desempenho**. |
+| **RNF07** | **Portabilidade** | O sistema deve ser acessível via **Web** e estar preparado para o desenvolvimento futuro de um **Aplicativo Mobile (iOS e Android)**. |
+| **RNF08** | **Privacidade** | O sistema deve estar em conformidade com as regulamentações de **proteção de dados (LGPD no Brasil)**, garantindo a transparência e consentimento no tratamento das informações dos clientes. |
+| **RNF09** | **Confiabilidade** | O sistema deve possuir um mecanismo robusto de **backup e recuperação de desastres** para garantir a integridade e disponibilidade dos dados. |
 
-### Entidade Departamento - US02 - Manter Departamento
-Um departamento tem código, nome, sigla, endereço e o centro ao qual pertence.
+### Métricas de Avaliação de Desempenho (KPIs)
 
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF02.01 - Inserir Departamento | Insere novo departamento informando: código, nome, sigla, endereço e centro. | Administrador |
-RF02.02 - Listar Departamentos | Listagem de departamentos utilizando filtros nos atributos: código, nome, sigla, endereço e centro. | Administrador |
-RF02.03 - Atualizar Departamento | Atualiza um departamento informando: nome, sigla, endereço e centro. | Administrador |
-RF02.04 - Deletar Departamento | Deleta um departamento informando o código. | Administrador |
+| Categoria | Métrica (KPI) | Objetivo |
+| :--- | :--- | :--- |
+| **Financeiro** | **Taxa de Comissão Média** | Monitorar o percentual médio de repasse e custo de serviço sobre as vendas. |
+| **Estoque** | **Acuracidade do Estoque (Real vs. Sistema)** | Medir a diferença entre o estoque físico e o registrado, indicando a confiabilidade do sistema. |
+| **Usabilidade** | **Taxa de Conclusão de Tarefas (Ex: Cadastrar Produto)** | Medir o quão fácil e rápido um Colaborador realiza tarefas-chave. |
+| **Vendas** | **Ticket Médio por Colaborador** | Avaliar o valor médio de vendas por empreendedor, ajudando o Gerente a identificar *gaps* e sucessos. |
+| **Desempenho** | **Tempo de Resposta da API** | Monitorar o tempo que o sistema leva para processar requisições (crucial para o **RNF02**). |
+| **Adoção** | **Frequência de Acesso ao Dashboard** | Medir o engajamento dos Colaboradores com o sistema. |
 
----
-
-### Entidade Sala - US03 - Manter Sala
-Uma sala tem um número, um nome, capacidade, tamanho, bloco e o centro ao qual pertence.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF03.01 - Inserir Sala         | Insere nova sala informando: número, nome, capacidade, tamanho, bloco e centro. | Administrador |
-RF03.02 - Listar Salas         | Listagem de salas utilizando filtros nos atributos: número, nome, capacidade, tamanho, bloco e centro. | Administrador |
-RF03.03 - Atualizar Sala       | Atualiza uma sala informando: nome, capacidade, tamanho, bloco e centro. | Administrador |
-RF03.04 - Deletar Sala         | Deleta uma sala informando o número. | Administrador |
-
----
-
-### Entidade Componente Curricular - RF004 - Manter Componente Curricular
-Um componente curricular é de um tipo de componente. Ele tem: código, nome, ementa, departamento, carga horária, modalidade, equivalências, requisitos com outros componentes e data de criação.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF04.01 - Inserir Componente   | Insere novo componente curricular informando: código, nome, ementa, departamento, carga horária, modalidade, equivalências, requisitos e data de criação. | Administrador |
-RF04.02 - Listar Componentes   | Listagem de componentes curriculares utilizando filtros nos atributos: código, nome, ementa, departamento, carga horária, modalidade e data de criação. | Administrador |
-RF04.03 - Atualizar Componente | Atualiza um componente curricular informando: nome, ementa, departamento, carga horária, modalidade, equivalências e requisitos. | Administrador |
-RF04.04 - Deletar Componente   | Deleta um componente curricular informando o código. | Administrador |
-
----
-
-### Entidade Horário de Aula - RF005 - Manter Horário de Aula
-Um horário tem: dia da semana, turno, ordem (identificador), hora de início e hora de final.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF05.01 - Inserir Horário      | Insere novo horário informando: dia da semana, turno, ordem, hora de início e hora de final. | Administrador |
-RF05.02 - Listar Horários      | Listagem de horários utilizando filtros nos atributos: dia da semana, turno, ordem, hora de início e hora de final. | Administrador |
-RF05.03 - Atualizar Horário    | Atualiza um horário informando: dia da semana, turno, ordem, hora de início e hora de final. | Administrador |
-RF05.04 - Deletar Horário      | Deleta um horário informando a ordem. | Administrador |
-
----
-
-### Entidade Professor - RF006 - Manter Professor
-Um professor tem: matrícula, nome, e-mail, telefone e o departamento.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF06.01 - Inserir Professor    | Insere novo professor informando: matrícula, nome, e-mail, telefone e departamento. | Administrador |
-RF06.02 - Listar Professores   | Listagem de professores utilizando filtros nos atributos: matrícula, nome, e-mail, telefone e departamento. | Administrador |
-RF06.03 - Atualizar Professor  | Atualiza um professor informando: nome, e-mail, telefone e departamento. | Administrador |
-RF06.04 - Deletar Professor    | Deleta um professor informando a matrícula. | Administrador |
-
----
-
-### Entidade Turma - RF007 - Manter Turma
-Uma turma tem: código, professores, salas e horários. É de um componente curricular e pode ter mais de um professor, uma ou mais salas e vários horários de aulas.
-
-Requisito                     | Descrição   | Ator                      |
----------                     | ----------- | ----------                |
-RF07.01 - Inserir Turma        | Insere nova turma informando: código, componente curricular, professores, salas e horários. | Chefes, Coordenadores |
-RF07.02 - Listar Turmas         | Listagem de turmas utilizando filtros nos atributos: código, componente curricular, professores, salas e horários. | Chefes, Coordenadores |
-RF07.03 - Atualizar Turma      | Atualiza uma turma informando: professores, salas e horários. | Chefes, Coordenadores |
-RF07.04 - Deletar Turma        | Deleta uma turma informando o código. | Chefes, Coordenadores |
-
----
-
-### Entidade Usuário - US08 - Manter Usuário
-Um usuário tem: nome, e-mail, senha e pode pertencer a um ou mais grupos.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF08.01 - Inserir Usuário      | Insere novo usuário informando: nome, e-mail, senha e grupos. | Administrador |
-RF08.02 - Listar Usuários      | Listagem de usuários utilizando filtros nos atributos: nome, e-mail e grupos. | Administrador |
-RF08.03 - Atualizar Usuário    | Atualiza um usuário informando: nome, e-mail, senha e grupos. | Administrador |
-RF08.04 - Deletar Usuário      | Deleta um usuário informando o e-mail. | Administrador |
-RF08.05 - Login do Usuário     | Realiza login informando e-mail e senha. | Usuário |
-RF08.06 - Logout do Usuário    | Realiza logout encerrando a sessão do usuário. | Usuário |
-
----
-
-### Entidade Grupo - US09 - Manter Grupo
-Um grupo define permissões atribuídas a um conjunto de usuários. Ele tem: nome e permissões.
-
-Requisito                     | Descrição   | Ator           |
----------                     | ----------- | ----------     |
-RF09.01 - Inserir Grupo        | Insere novo grupo informando: nome e permissões. | Administrador |
-RF09.02 - Listar Grupos        | Listagem de grupos utilizando filtros nos atributos: nome e permissões. | Administrador |
-RF09.03 - Atualizar Grupo      | Atualiza um grupo informando: nome e permissões. | Administrador |
-RF09.04 - Deletar Grupo        | Deleta um grupo informando o nome. | Administrador |
-
----
 
 ### Modelo Conceitual
-
-Abaixo apresentamos o modelo conceitual usando o **Mermaid**.
-
-```mermaid
-erDiagram
-    CENTRO {
-        string codigo PK
-        string nome
-        string sigla
-        string endereco
-        string site
-    }
-
-
-    DEPARTAMENTO {
-        string codigo PK
-        string nome
-        string sigla
-        string endereco
-    }
-    DEPARTAMENTO ||--o{ CENTRO : "pertence a"
-
-    SALA {
-        string numero PK
-        string nome
-        int capacidade
-        float tamanho
-        string bloco
-    }
-    SALA ||--o{ CENTRO : "pertence a"
-
-    COMPONENTE {
-        string codigo PK
-        string nome
-        text ementa
-        int cargaHoraria
-        string modalidade
-        date dataCriacao
-    }
-    COMPONENTE ||--o{ DEPARTAMENTO : "é de"
-    COMPONENTE }o--o{ COMPONENTE : "tem equivalências/requisitos"
-
-    HORARIO {
-        int id PK
-        string diaSemana
-        string turno
-        int ordem
-        time horaInicio
-        time horaFim
-    }
-
-    PROFESSOR {
-        string matricula PK
-        string nome
-        string email
-        string telefone
-    }
-    PROFESSOR ||--o{ DEPARTAMENTO : "pertence a"
-
-    TURMA {
-        string codigo PK
-    }
-    TURMA ||--o{ COMPONENTE : "é de"
-    TURMA ||--o{ PROFESSOR : "é ministrada por"
-    TURMA ||--o{ SALA : "é realizada em"
-    TURMA ||--o{ HORARIO : "tem"
-
-    USUARIO {
-        string email PK
-        string nome
-        string senha
-    }
-    USUARIO }o--o{ GRUPO : "pertence a"
-
-    GRUPO {
-        string nome PK
-    }
-    GRUPO ||--o{ PERMISSAO : "tem"
-
-    PERMISSAO {
-        string nome PK
-    }
-```
-
-#### Descrição das Entidades
-
-## Lista de Requisitos Não-Funcionais
-
-Requisito                                 | Descrição   |
----------                                 | ----------- |
-RNF001 - Deve ser acessível via navegador | Deve abrir perfeitamento no Firefox e no Chrome. |
-RNF002 - Consultas deve ser eficiente | O sistema deve executar as consultas em milessegundos |
-RNF003 - Log e histórico de acesso e funções | Deve manter um log de todos os acessos e das funções executadas pelo usuário |
 
 ## Riscos
 
